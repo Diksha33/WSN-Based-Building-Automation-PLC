@@ -5,8 +5,8 @@
 // =====================================================
 // 1. WIFI CONFIGURATION
 // =====================================================
-const char* ssid     = "FTTH-9942";
-const char* password = "ESP32test2026";
+const char* ssid = "YOUR_WIFI_SSID";
+const char* password = "YOUR_WIFI_PASSWORD";
 
 // Static IP must match RemoteAddress in the PLC's DB2 (192.168.0.3).
 // Set USE_STATIC_IP to false to use DHCP instead.
