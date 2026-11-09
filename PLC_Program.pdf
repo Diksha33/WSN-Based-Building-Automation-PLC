@@ -1,0 +1,39 @@
+ PLC PROGRAM DOCUMENTATION
+  WSN-Based Intelligent Building Automation Using PLC
+
+ 1. Overview
+The project uses a Siemens S7-1200 PLC to implement intelligent building automation by integrating ESP32-based wireless sensor nodes through Modbus TCP communication.
+
+ 2. Hardware and Software
+- Siemens S7-1200 PLC (CPU 1215C)
+- ESP32 wireless sensor nodes
+- Temperature and humidity sensor
+- Gas/CO sensor
+- Siemens TIA Portal V19
+- Ethernet communication
+- Modbus TCP protocol
+
+ 3. PLC Communication
+The Siemens S7-1200 PLC communicates with ESP32 nodes using Modbus TCP. The PLC uses the MB_CLIENT instruction to read sensor data and exchange control information through configured registers.
+
+ 4. PLC Programming
+The PLC program is developed using ladder logic in Siemens TIA Portal V19. It processes incoming sensor values, evaluates operating conditions and executes the configured automation logic.
+
+ 5. System Functions
+- Monitoring environmental parameters.
+- Reading sensor data from ESP32 nodes.
+- Processing temperature and other sensor values.
+- Implementing automatic lighting and AC control logic.
+- Controlling servo-based actuators.
+
+ 6. Communication Configuration
+- Protocol: Modbus TCP
+- TCP Port: 502
+- PLC: Modbus TCP Client
+- ESP32: Modbus TCP Server
+- Communication medium: Ethernet/Wi-Fi network
+
+ 7. Conclusion
+The PLC-based automation system demonstrates the integration of wireless sensor networks with industrial control technology. It provides practical experience in PLC programming, Modbus TCP communication, sensor monitoring and intelligent building automation.
+
+  
