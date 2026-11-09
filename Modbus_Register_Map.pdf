@@ -1,0 +1,63 @@
+Modbus TCP – Register Map
+WSN-Based Building Automation Using PLC
+
+1. Introduction
+Modbus TCP is an industrial communication protocol used for exchanging data between electronic devices over Ethernet networks. It is based on the Modbus protocol and uses TCP/IP for communication.
+
+In this project, Modbus TCP establishes communication between the ESP32 sensor node and Siemens S7-1200 PLC. It enables the transfer of real-time sensor data for monitoring and automation.
+
+2. Working Principle
+The ESP32 collects data from different sensors, including temperature, humidity, smoke and flame sensors. The collected data is stored in Modbus registers.
+
+The Siemens S7-1200 PLC communicates with the ESP32 using the MB_CLIENT instruction. It reads sensor values from the Modbus registers and processes them according to the programmed control logic.
+
+The processed information is used for environmental monitoring, alarm generation and building automation.
+
+3. Modbus Register Map
+A Modbus register map is a structured representation of data exchanged between a client and a server. It defines register addresses, data types and the parameters associated with each register.
+
+The register map helps the PLC identify and access specific sensor values from the ESP32.
+
+4. Types of Modbus Data
+Modbus supports four main data types:
+- Coils: Read/write single-bit data, generally used for digital outputs.
+- Discrete Inputs: Read-only single-bit data, generally used for digital inputs.
+- Input Registers: Read-only 16-bit registers, generally used for measurement values.
+- Holding Registers: Read/write 16-bit registers, used for sensor data, configuration and control values.
+
+5. Modbus TCP Communication Architecture
+Modbus TCP follows a client-server communication architecture.
+- Client: Initiates communication requests.
+- Server: Receives requests and provides the requested data.
+- TCP/IP: Provides reliable data transmission over the network.
+- Port 502: Standard TCP port used by Modbus TCP.
+In this project, the Siemens PLC acts as the Modbus TCP client, while the ESP32 acts as the Modbus TCP server.
+
+6. Role of MB_CLIENT in Siemens PLC
+MB_CLIENT is a communication instruction available in Siemens TIA Portal for Modbus TCP client communication.
+
+It is used to:
+- Establish communication with the Modbus TCP server.
+- Read data from holding or input registers.
+- Write data to supported registers.
+- Monitor communication status.
+- Indicate successful operations or communication errors.
+
+7. Advantages of Modbus TCP
+1. Simple and easy-to-implement communication protocol.
+2. Supports communication over Ethernet networks.
+3. Provides reliable data transmission using TCP.
+4. Allows communication between devices from different manufacturers.
+5. Suitable for industrial monitoring and automation.
+6. Supports real-time exchange of process data.
+
+8. Applications
+- Industrial automation systems.
+- Building management systems.
+- Energy monitoring.
+- Environmental monitoring.
+- Process control systems.
+- Smart manufacturing and IoT applications.
+
+9. Conclusion
+Modbus TCP provides an effective communication interface between the ESP32 sensor node and Siemens S7-1200 PLC. It enables sensor data exchange, centralized monitoring and automated control. Its simplicity, reliability and compatibility make it suitable for industrial automation and intelligent building management systems.
